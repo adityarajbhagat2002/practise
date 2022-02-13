@@ -15,7 +15,7 @@ public:
         {
             switch (nums[mid])
             {
-            case 0:
+            case 0: 
                 swap(nums[lo++], nums[mid++]);
                 break;
             case 1:
