@@ -4,15 +4,15 @@ import javax.swing.plaf.synth.SynthSeparatorUI;
 
 public class Question2 {
 public static void main(String[] args) {
-    print(1,10);
+    print(10,1);
     
 
 
     }
     static void print(int start, int end ){
-        if(start <= end){
+        if(start >= end){
             System.out.println(start);
-            print(start +1 , end);
+            print(start -1 , end);
             }
             return;
 
