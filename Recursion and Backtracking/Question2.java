@@ -1,21 +1,22 @@
+import java.util.*;
 
+import javax.swing.plaf.synth.SynthSeparatorUI;
 
 public class Question2 {
 public static void main(String[] args) {
-    printnumbers(10);
-}
+    print(1,10);
+    
 
- static void printnumbers(int n){
-    int i = 0 ;
-    if(i<n){
-        System.out.println(i);
-        i++;
+
+    }
+    static void print(int start, int end ){
+        if(start <= end){
+            System.out.println(start);
+            print(start +1 , end);
+            }
+            return;
+
         
     }
-    printnumbers(i);
-    
-    return;
-    
-}
 
-}
+  }
