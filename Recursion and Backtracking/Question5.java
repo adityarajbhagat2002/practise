@@ -1,27 +1,23 @@
 import java.util.Scanner;
-import java.util.*;
-
 
 public class Question5 {
+    static void reverse(int i, int arr[], int n) {
+        if (i > n / 2)
+            return;
+        int temp = arr[i];
+        arr[i] = arr[n - i - 1];
+        arr[n - i - 1] = temp;
+        reverse(i + 1, arr, n);
+    }
 
-public static void main(String[] args) {
-    
-    int[] arr ={1,2,3,4,5};
-    skip(arr,0,arr.length-1);
-     System.out.println(Arrays.toString(arr));
- }
-
- private static void skip(int[] arr , int start , int end) {
-     if(start>=end){
-         return ;
-     }
-     swap(arr,start,end);
-     skip(arr,start+1,end-1);
- }
-
- private static void swap(int[] arr ,int start, int end) {
-     int temp = arr[start];
-     arr[start] = arr[end];
-     arr[end] = temp;
- }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int arr[] = new int[n];
+        for (int i = 0; i < n; i++)
+            arr[i] = sc.nextInt();
+        reverse(0, arr, n);
+        for (int i = 0; i < n; i++)
+            System.out.print(arr[i] + " ");
+    }
 }
